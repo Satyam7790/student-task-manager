@@ -1,0 +1,16 @@
+{
+  "name": "todo-api-with-env-checker",
+  "version": "1.0.0",
+  "description": "A beginner-friendly Todo REST API using @aalu127/env-checker-lite",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": ["todo", "rest-api", "express", "env-validation"],
+  "license": "MIT",
+  "dependencies": {
+    "@aalu127/env-checker-lite": "^1.0.0",
+    "express": "^5.3.0"
+  }
+}
