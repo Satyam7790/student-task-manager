@@ -16,35 +16,39 @@ A small beginner-friendly REST API built with Node.js and Express. It stores tas
 - Express.js
 - `@aalu127/env-checker-lite`
 - JSON file storage
-
+  
 ## Installation
 
-Open a terminal in the project directory and install dependencies:
+Clone the repository:
 
-```sh
+```bash
+git clone YOUR_REPOSITORY_URL
+cd student-task-manager
+```
+
+Install dependencies:
+
+```bash
 npm install
 ```
 
-Copy `.env.example` to `.env` and adjust the values if needed. The application reads variables from the process environment; to load a `.env` file, export its values in your shell or use a local environment-file runner such as `node --env-file=.env src/server.js` (Node.js 20.6+). No extra package is needed.
+Create your local environment file:
 
-## Environment configuration
+```bash
+cp .env.example .env
+```
 
-| Variable | Type | Default | Purpose |
-| --- | --- | --- | --- |
-| `PORT` | number | `3000` | Port where Express listens |
-| `NODE_ENV` | string | `development` | Environment label displayed at startup |
-| `MAX_TASKS` | number | `100` | Maximum number of stored tasks |
+The application uses `dotenv` to automatically load environment variables from `.env` when the server starts.
 
-The checker converts valid numeric values such as `"4000"` to numbers. If a value is invalid, it prints a readable error and exits before Express begins listening.
+Start the server:
 
-For example, with `PORT=hello`:
+```bash
+npm start
+```
 
-```text
-Environment Validation Failed!
+The API will be available at `http://localhost:3000` by default.
 
-- PORT must be a valid number.
-
-Please check your environment variables.
+**Note:** The `.env` file is intentionally excluded from GitHub. Use `.env.example` as a template to create your local configuration.
 ```
 
 ## Start the server
